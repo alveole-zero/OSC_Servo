@@ -61,9 +61,15 @@ void DecodeServo(OSCMessage &msg, int i)
     if (DEBUG_LEVEL >=1 ) Serial.println("Float received");
 //    float val = 
     sliders[i]=msg.getFloat(0);
+    
+//Passage de X Y
     int serv1 = 1.0*(sliders[0]+sliders[1])*180-90;
     int serv2 = 1.0*(sliders[0]-sliders[1])*180+90;
-
+    
+//Passage des angles
+//    int serv1 = sliders[0];
+//    int serv2 = sliders[1];    
+    
     Serial.print("Servos "); 
     Serial.print(serv1);
     Serial.print(" / ");
