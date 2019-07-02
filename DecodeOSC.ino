@@ -62,7 +62,7 @@ void DecodeServo(OSCMessage &msg, int i)
 //    float val = 
     sliders[i]=msg.getFloat(0);
     
-//Passage de X Y
+//Passage de coordonnees polaires
     int serv1 = 1.0*(sliders[0]+sliders[1])*180-90;
     int serv2 = 1.0*(sliders[0]-sliders[1])*180+90;
     
